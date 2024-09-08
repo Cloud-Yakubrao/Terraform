@@ -5,7 +5,6 @@ metadata:
 spec:
   type: Nodeport
   selector:
-    matcheLabel:
        app: web-app
    ports:
     - containerport: 80
