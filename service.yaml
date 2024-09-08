@@ -1,0 +1,14 @@
+apiVersion: V1
+kind: Service
+metadata:
+   name: nodportservice
+spec:
+  type: Nodeport
+  selector:
+    matcheLabel:
+       app: web-app
+   ports:
+    - containerport: 80
+      targetport: 8080
+      nodePort: 30007      # Node port (optional, otherwise Kubernetes assigns one in the range 30000-32767)
+ 
